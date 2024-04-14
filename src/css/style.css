@@ -1,0 +1,313 @@
+/*Coloquei só uma fonte pras letras, deixei tudo centralizado pra ficar mais visual, e coloquei responsividade*/
+body {
+  font-family: Arial, sans-serif;
+}
+
+header, main, footer {
+  margin: 0 auto; 
+  max-width: 1200px; 
+  padding: 0 20px; 
+}
+
+
+.top-bar {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.search-div {
+  display: flex;
+  a {
+    color: #333333;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #0E77BB;
+  }
+}
+
+.sign-up {
+  background-color: #66ffb1;
+  color: #333333;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.sign-up:hover {
+  background-color: #1fff8b;
+  transform: scale(1.05);
+}
+
+.top-option {
+  display: flex;
+  align-items: center;
+  margin-right: 25px;
+}
+
+.option-image {
+  margin-right: 5px;
+  width: 20px;
+  height: 20px;
+}
+
+.header-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 190px;
+  margin-top: 7px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  white-space: nowrap; /* Impede a quebra de linha */
+}
+
+nav ul > li {
+  position: relative;
+  display: inline-block;
+  margin-right: 3%; /* Adiciona um espaço entre os itens do menu */
+}
+
+nav ul > li > a {
+  position: relative; /* Tornando o link relativo para o posicionamento da seta */
+  text-decoration: none; /* Remove o sublinhado dos links */
+  color: black;
+}
+
+nav ul > li > a:hover {
+  color: #0E77BB;
+}
+
+nav ul > li.parent > a::after {
+  content: '>';
+  margin-left: 3%;
+  display: inline-block;
+  transform: rotate(90deg); /* Inicia a seta apontando para cima */
+  transition: transform 0.3s ease;
+}
+
+nav ul > li.parent:hover > a::after {
+  transform: rotate(-90deg); /* Rotaciona a seta para baixo quando em hover */
+}
+
+nav ul li ul {
+  display: none;
+  position: absolute;
+  top: 100%; /* Posiciona o submenu abaixo do item do menu principal */
+  left: 0;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  min-width: 200px;
+  border-radius: 5px; /* Adiciona border-radius para suavizar as bordas */
+}
+
+nav ul li:hover > ul {
+  display: block;
+}
+
+nav ul li ul li {
+  display: block;
+  padding: 8px 20px; /* Ajusta o espaçamento dentro do submenu */
+}
+
+nav ul li ul li:hover {
+  background-color: #f0f0f0; /* Adiciona destaque ao item do submenu em hover */
+}
+
+nav ul li ul a {
+  display: block;
+  color: black;
+  text-decoration: none; /* Remove o sublinhado dos links */
+}
+
+nav ul li ul a:hover {
+  background-color: #f0f0f0; /* Adiciona destaque ao item do submenu em hover */
+  color: #0E77BB; /* Muda a cor do texto em hover */
+}
+
+.students-image img {
+  margin-top: 10px;
+}
+
+.title-box {
+  position: relative;
+  width: 50%; /* Defina a largura desejada */
+  margin: auto; /* Centralize horizontalmente */
+  background-color: #F2F2F2;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 30px;
+  box-sizing: border-box; /* Inclui o preenchimento e a borda na largura total */
+  z-index: 1; /* Coloca a caixa acima da imagem */
+}
+
+.students-image {
+  position: relative;
+  margin-bottom: 80px;
+}
+
+.students-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 10px; /* Adicione o mesmo raio de borda usado na caixa */
+}
+
+.title-box {
+  position: absolute;
+  bottom: -60px; /* Ajuste esse valor conforme necessário para descer mais a caixa */
+  left: 50%; /* Alinhe a caixa horizontalmente */
+  transform: translateX(-50%); /* Centralize horizontalmente */
+  background-color: #F2F2F2;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 25px 30px;
+  width: 65%; /* Defina a largura desejada */
+  box-sizing: border-box; /* Inclua o preenchimento e a borda na largura total */
+  h1 {
+    font-size: 45px;
+    color: #01347C;
+  }
+}
+
+.description {
+  margin-bottom: 20px;
+  p {
+    font-size: larger;
+  }
+  a {
+    text-decoration: none;
+    color: #01347C;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  input[type="text"], select {
+    margin: 5px 0 10px 0;
+    height: 35px;
+    padding-left: 10px;
+  }
+}
+
+.final-form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.check-div {
+  display: flex;
+  align-items: center;
+  label {
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    font-size: 16px;
+    margin-left: 10px;
+  }
+}
+
+.button-color {
+  background-color: #0E77BB;
+  text-align: center;
+  height: 35px;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  padding-inline: 20px;
+  font-weight: bold;
+}
+
+.send-button {
+  margin: 20px 0 50px 0;
+  align-self: flex-end;  
+}
+
+.options-blocks {
+  margin-top: 60px;
+  display: flex;
+}
+
+.button-color:hover {
+  cursor: pointer;
+  background-color: #0B6098;
+  color: #FFFFF6;
+}
+
+.have-questions {
+  font-size: 70px;
+  color: #01347C;
+}
+
+.questions-info {
+  margin-bottom: 10px;
+}
+
+.all-blocks {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Duas colunas */
+  grid-template-rows: repeat(3, 1fr); /* Três linhas */
+  gap: 20px; /* Espaçamento entre as divs */
+  margin-left: 150px;
+  margin-bottom: 50px;
+}
+
+.block {
+  background-color: #e6e8ec;
+  width: 310px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  p {
+    margin-bottom: 12px;
+  }
+}
+
+.block:hover {
+  background-color: #D3DAE5;
+}
+
+.block-title {
+  display: flex;
+  align-items: center;
+  img {
+    width: 40px;
+    margin-right: 10px;
+    margin-bottom: 12px;
+  }
+  h2 {
+    color: #01347C;
+  }
+}
+
+.socials {
+  display: flex;
+  margin-top: 40px;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.socials-icons {
+  margin-left: 40px;
+}
+
+.socials-image {
+  width: 32px;
+  margin-right: 10px;
+}
+
+.socials-end {
+  margin-bottom: 30px;
+}
